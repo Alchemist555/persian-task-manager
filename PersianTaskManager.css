@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f9fafb;
+  direction: rtl;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 80px;
+  overflow-y: auto;
+}
+
+.container {
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+.sample-button {
+  background-color: #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+  border: none;
+  color: #374151;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sample-button:hover {
+  background-color: #e5e7eb;
+}
+
+.text-input {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.primary-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-button:hover:not(.disabled) {
+  background-color: #1d4ed8;
+}
+
+.primary-button.disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.navigation-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #6b7280;
+}
+
+.nav-button.active {
+  color: #2563eb;
+}
+
+.nav-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.nav-text {
+  font-size: 12px;
+}
+
+.task-card {
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.task-card:hover {
+  border-color: #2563eb;
+}
+
+.task-card.completed {
+  border-color: #86efac;
+  background-color: #f0fdf4;
+}
+
+.task-icon {
+  margin-left: 12px;
+  font-size: 20px;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2937;
+}
+
+.task-card.completed .task-text {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.empty-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.empty-text {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card.blue {
+  background-color: #dbeafe;
+}
+
+.stat-card.green {
+  background-color: #d1fae5;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.stat-card.blue .stat-number {
+  color: #2563eb;
+}
+
+.stat-card.green .stat-number {
+  color: #10b981;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.progress-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.progress-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.progress-container {
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #dbeafe;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 16px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .container {
+    padding: 12px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+}
