@@ -1,4 +1,4 @@
-import PersianTaskManager from './PersianTaskManager'
+import PersianTaskManager from '../PersianTaskManager'
 
 function App() {
   return <PersianTaskManager />
